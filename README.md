@@ -20,6 +20,8 @@ wget run https://raw.githubusercontent.com/kizYTB/Bootloader-for-CC-Tweaked/refs
 
 ```
 
+and
+
 ```
 wget run https://kiz-data.jtheberg.fr/CCMC/OS/install/install.lua
 ```
