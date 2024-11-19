@@ -10,7 +10,7 @@
 # Program required to install
 To install this bone you have to install you bootloader
 
-<p href="https://github.com/kizYTB/Bootloader-for-CC-Tweaked">Bootloader</p>
+<a href="https://github.com/kizYTB/Bootloader-for-CC-Tweaked">Bootloader</a>
 
 
 # Installation
