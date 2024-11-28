@@ -4,7 +4,16 @@ local function Bootloader()
 	run("cd","/.bootloader/OS/")
 	run("wget","https://raw.githubusercontent.com/kizYTB/NewOS/refs/heads/main/.TelOS/bootloader_config_file/TelOS.json")
 
+    run("cd","/.bootloader/")
+
     run("rm","/.bootloader/boot.lua")
+
+    run("wget","https://raw.githubusercontent.com/kizYTB/NewOS/refs/heads/main/TelOS-Bootloader/boot.lua","boot.lua")
+
+    run("cd","/.bootloader/Logo/")
+
+    run("wget","https://raw.githubusercontent.com/kizYTB/NewOS/refs/heads/main/TelOS-Bootloader/logo.nfp")
+
 end
 
 local function NewOS()
