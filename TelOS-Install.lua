@@ -3,6 +3,8 @@ local run = shell.run
 local function Bootloader()
 	run("cd","/.bootloader/OS/")
 	run("wget","https://raw.githubusercontent.com/kizYTB/NewOS/refs/heads/main/.TelOS/bootloader_config_file/TelOS.json")
+
+    run("rm","/.bootloader/boot.lua")
 end
 
 local function NewOS()
