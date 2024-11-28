@@ -1,4 +1,4 @@
 {
-    "name": "NewOS",
-    "path": "/.NewOS/boot.lua"
+    "name": "telOS",
+    "path": "/.TelOS/boot.lua"
 }
