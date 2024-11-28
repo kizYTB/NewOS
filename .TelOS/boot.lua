@@ -1,6 +1,6 @@
 -- URL du fichier de version et du programme à télécharger
 local versionURL = "https://kiz-data.jtheberg.fr/CCMC/OS/conf/versions.txt"  -- URL du fichier contenant le numéro de version actuel
-local currentVersion = "1.2"  -- Modifiez cela avec la version actuelle de votre programme
+local currentVersion = "1.10"  -- Modifiez cela avec la version actuelle de votre programme
 
 -- Fonction pour récupérer le contenu d'une URL
 local function httpGet(url)
@@ -10,8 +10,8 @@ local function httpGet(url)
         response.close()  -- Ferme la connexion
         return content:gsub("%s+", "")  -- Nettoie le contenu (supprime les espaces)
     else
-        error("Erreur de connexion à " .. url)  -- Gère l'erreur de connexion
-        print("Imposible de demarrer. 0x000001")
+        error("Error " .. url)  -- Gère l'erreur de connexion
+        print("no possible to start error code : 0x000001")
     end
 end
 
@@ -21,7 +21,7 @@ local function checkForUpdate()
 
     -- Compare la version actuelle avec la version récupérée
     if latestVersion ~= currentVersion then
-        shell.run("/.NewOS/Up/up.lua")
+        shell.run("/.TelOS/Up/up.lua")
         sleep(3)
         return true  -- Retourne vrai si une mise à jour est disponible
     else
@@ -37,9 +37,9 @@ end
 local w, h = term.getSize()
 
 -- Texte de base
-local text = "Demarrage"
-local newMessage = "NewOS a correctement demmarer ! :)"
-local updateMessage = "Vérification de mise à jour"
+local text = "Starting . . ."
+local newMessage = "TelOS : OK"
+local updateMessage = "Check for update."
 
 -- Créer une ligne de bordure pleine avec des underscores
 local border = string.rep("_", w)
@@ -92,16 +92,16 @@ end
 -- Fonction pour lancer le shell modifié
 local function LaunchShell()
     sleep(1)
-    shell.run("bg", "/.NewOS/Shell/shell.lua")
+    shell.run("bg", "/.TelOS/Shell/shell.lua")
 end
 
 local function ProgSet()
-    shell.setAlias("/help","/.NewOS/Commands/help.lua")
-    shell.setAlias("/ide","/.NewOS/Prog/ide.lua")
-    shell.setAlias("/music","/.NewOS/Prog/music.lua")
-    shell.setAlias("/firewolf","/.NewOS/Prog/firewolf.lua")
-    shell.setAlias("/NewOS DEBUG","/.NewOS/debug/debug.lua")
-    shell.setAlias("/pkg","/.NewOS/pkg/lib-pkg.lua")
+    shell.setAlias("/help","/.TelOS/Commands/help.lua")
+    shell.setAlias("/ide","/.TelOS/Prog/ide.lua")
+    shell.setAlias("/music","/.TelOS/Prog/music.lua")
+    shell.setAlias("/firewolf","/.TelOS/Prog/firewolf.lua")
+    shell.setAlias("/TelOS DEBUG","/.TelOS/debug/debug.lua")
+    shell.setAlias("/pkg","/.TelOS/pkg/lib-pkg.lua")
 end
 
 -- Programme principal
