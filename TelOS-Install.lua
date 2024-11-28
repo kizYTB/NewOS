@@ -12,6 +12,8 @@ local function Bootloader()
 
     run("cd","/.bootloader/Logo/")
 
+    run("rm","logo.nfp")
+
     run("wget","https://raw.githubusercontent.com/kizYTB/NewOS/refs/heads/main/TelOS-Bootloader/logo.nfp")
 
 end
