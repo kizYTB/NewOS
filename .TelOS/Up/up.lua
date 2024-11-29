@@ -54,7 +54,7 @@ local function showNewMessage()
 end
 
 local function setupdate()
-    shell.setAlias("/update","/.TelOS/up/install.lua")
+    shell.setAlias("/update","/.TelOS/Up/install.lua")
 end
 
 -- Boucle principale
