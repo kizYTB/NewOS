@@ -15,7 +15,6 @@ local function Bootloader()
     run("rm","logo.nfp")
 
     run("wget","https://raw.githubusercontent.com/kizYTB/NewOS/refs/heads/main/TelOS-Bootloader/logo.nfp")
-
 end
 
 local function NewOS()
@@ -46,7 +45,7 @@ local function Components()
     run("cd","/.TelOS/pkg/")
     run("wget","https://raw.githubusercontent.com/kizYTB/CC-pkg/refs/heads/main/lib-pkg.lua")
 	sleep(2)
-	run("cd","/..TelOS/Up")
+	run("cd","/.TelOS/Up")
 	run("wget","https://raw.githubusercontent.com/kizYTB/NewOS/refs/heads/main/.TelOS/Up/up.lua","up.lua")
 	run("wget","https://raw.githubusercontent.com/kizYTB/NewOS/refs/heads/main/.TelOS/Up/install.lua","install.lua")
 end
